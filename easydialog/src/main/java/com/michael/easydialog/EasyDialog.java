@@ -334,10 +334,10 @@ public class EasyDialog {
     public EasyDialog setBackgroundResource(int resId, int left, int top, int right, int bottom) {
         setBackgroundResource(resId);
 
-        left = left == 0 ? llContent.getPaddingLeft() : left;
-        top = top == 0 ? llContent.getPaddingTop() : top;
-        right = right == 0 ? llContent.getPaddingRight() : right;
-        bottom = bottom == 0 ? llContent.getPaddingBottom() : bottom;
+        left += left == 0 ? llContent.getPaddingLeft() : left;
+        top += top == 0 ? llContent.getPaddingTop() : top;
+        right += right == 0 ? llContent.getPaddingRight() : right;
+        bottom += bottom == 0 ? llContent.getPaddingBottom() : bottom;
 
         llContent.setPadding(left, top, right, bottom);
         return this;
