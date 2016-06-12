@@ -1,6 +1,8 @@
 apply plugin: 'com.android.library'
 apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
-
+apply plugin: 'com.github.dcendents.android-maven'
+// Your Group
+group='com.github.suntabu'
 android {
     compileSdkVersion 21
     buildToolsVersion "21.1.1"
