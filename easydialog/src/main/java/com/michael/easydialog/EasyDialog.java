@@ -579,7 +579,7 @@ public class EasyDialog {
                         x = getScreenWidth() - (contentWidth + layoutParams.rightMargin);
                     }
                 }
-                llContent.setX(x);
+//                llContent.setX(x);
                 break;
             case GRAVITY_LEFT:
             case GRAVITY_RIGHT:
