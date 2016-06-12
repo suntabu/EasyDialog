@@ -83,7 +83,6 @@ public class EasyDialog
      */
     private RelativeLayout rlOutsideBackground;
 
-    private RelativeLayout dialog_container;
 
     public EasyDialog(Context context)
     {
@@ -107,7 +106,6 @@ public class EasyDialog
             }
         });
         rlOutsideBackground = (RelativeLayout) dialogView.findViewById(R.id.rlOutsideBackground);
-        dialog_container = (RelativeLayout)dialogView.findViewById(R.id.dialog_container);
         setTouchOutsideDismiss(true);
         ivTriangle = (ImageView) dialogView.findViewById(R.id.ivTriangle);
         llContent = (LinearLayout) dialogView.findViewById(R.id.llContent);
@@ -376,8 +374,7 @@ public class EasyDialog
 
     public EasyDialog setBackgroundResource(int resId){
         ivTriangle.setVisibility(View.GONE);
-        llContent.setBackgroundColor(Color.parseColor("#00000000"));
-        dialog_container.setBackgroundResource(resId);
+        llContent.setBackgroundResource(resId);
         return this;
     }
 
