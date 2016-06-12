@@ -83,6 +83,8 @@ public class EasyDialog
      */
     private RelativeLayout rlOutsideBackground;
 
+    private RelativeLayout dialog_container;
+
     public EasyDialog(Context context)
     {
         initDialog(context);
@@ -105,6 +107,7 @@ public class EasyDialog
             }
         });
         rlOutsideBackground = (RelativeLayout) dialogView.findViewById(R.id.rlOutsideBackground);
+        dialog_container = (RelativeLayout)dialogView.findViewById(R.id.dialog_container);
         setTouchOutsideDismiss(true);
         ivTriangle = (ImageView) dialogView.findViewById(R.id.ivTriangle);
         llContent = (LinearLayout) dialogView.findViewById(R.id.llContent);
@@ -195,6 +198,8 @@ public class EasyDialog
         setLayout(view);
         return this;
     }
+
+
 
     /**
      * 设置三角形所在的位置
@@ -365,6 +370,14 @@ public class EasyDialog
         {
             drawableRound.setColor(color);
         }
+        return this;
+    }
+
+
+    public EasyDialog setBackgroundResource(int resId){
+        ivTriangle.setVisibility(View.GONE);
+        llContent.setBackgroundColor(Color.parseColor("#00000000"));
+        dialog_container.setBackgroundResource(resId);
         return this;
     }
 
