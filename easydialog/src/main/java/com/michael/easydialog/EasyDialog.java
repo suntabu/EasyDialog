@@ -375,6 +375,7 @@ public class EasyDialog
     public EasyDialog setBackgroundResource(int resId){
         ivTriangle.setVisibility(View.GONE);
         llContent.setBackgroundResource(resId);
+        llContent.setPadding(-25,0,0,0);
         return this;
     }
 

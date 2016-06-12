@@ -115,7 +115,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                         .setAnimationAlphaDismiss(500, 1.0f, 0.0f)
                         .setTouchOutsideDismiss(true)
                         .setMatchParent(true)
-                        .setBackgroundResource(R.drawable.abc_btn_check_material)
+                        .setBackgroundResource(R.drawable.easy_dialog_bg)
                         .setMarginLeftAndRight(24, 24)
                         .setOutsideColor(MainActivity.this.getResources().getColor(R.color.outside_color_trans))
                         .show();
