@@ -331,9 +331,10 @@ public class EasyDialog {
     }
 
 
+    private int originPaddingLeft = 0;
     public EasyDialog setBackgroundResource(int resId, int left, int top, int right, int bottom) {
         setBackgroundResource(resId);
-
+        originPaddingLeft = llContent.getPaddingLeft();
         left = llContent.getPaddingLeft() + left;
         top = llContent.getPaddingTop() + top;
         right = llContent.getPaddingRight() + right;
@@ -570,16 +571,18 @@ public class EasyDialog {
                 int availableLeftMargin = leftMargin - layoutParams.leftMargin;
                 int availableRightMargin = rightMargin - layoutParams.rightMargin;
                 int x = 0;
-                if (contentWidth / 2 <= availableLeftMargin && contentWidth / 2 <= availableRightMargin) {
-                    x = triangleCenterX - contentWidth / 2;
-                } else {
-                    if (availableLeftMargin <= availableRightMargin) {
-                        x = layoutParams.leftMargin;
-                    } else {
-                        x = getScreenWidth() - (contentWidth + layoutParams.rightMargin);
-                    }
-                }
-//                llContent.setX(x);
+//                if (contentWidth / 2 <= availableLeftMargin && contentWidth / 2 <= availableRightMargin) {
+//                    x = triangleCenterX - contentWidth / 2;
+//                } else {
+//                    if (availableLeftMargin <= availableRightMargin) {
+//                        x = layoutParams.leftMargin;
+//                    } else {
+//                        x = getScreenWidth() - (contentWidth + layoutParams.rightMargin);
+//                    }
+//                }
+
+                x =triangleCenterX - originPaddingLeft;
+                llContent.setX(x);
                 break;
             case GRAVITY_LEFT:
             case GRAVITY_RIGHT:
