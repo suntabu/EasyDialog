@@ -1,7 +1,8 @@
 apply plugin: 'com.android.library'
+// JitPack Maven
 apply plugin: 'com.github.dcendents.android-maven'
 // Your Group
-group='com.github.suntabu'
+group = 'com.github.suntabu'
 android {
     compileSdkVersion 21
     buildToolsVersion "21.1.1"
